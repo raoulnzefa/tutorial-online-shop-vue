@@ -25,7 +25,6 @@
     methods: {},
     watch: {},
     mounted() {
-      console.log('Hello i am alive!')
     }
   }
 </script>

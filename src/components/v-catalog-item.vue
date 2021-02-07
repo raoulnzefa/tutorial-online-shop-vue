@@ -7,10 +7,7 @@
     />
     <p class="v-catalog-item__name">{{ product_data.name }}</p>
     <p class="v-catalog-item__price">{{ product_data.price }} EUR</p>
-    <button
-      class="v-catalog-item__add_to_cart_btn btn"
-      @click="sendDataToParent"
-    >
+    <button class="v-catalog-item__add_to_cart_btn btn" @click="addToCard">
       Add to cart
     </button>
   </div>
@@ -32,8 +29,8 @@ export default {
   },
   computed: {},
   methods: {
-    sendDataToParent() {
-      this.$emit("sendArticle", this.product_data.article);
+    addToCard() {
+      this.$emit("addToCard", this.product_data);
     },
   },
 };
